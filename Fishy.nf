@@ -1,10 +1,11 @@
 #! /usr/bin/env nextflow
 nextflow.enable.dsl=2
 
-// Check if help flag was passed
+// Check if help flag was passed (my hacky solution)
 help1 = "${params.help}" == "nohelp" ? "nohelp" : "help"
 help2 = "${params.h}" == "nohelp" ? "nohelp" : "help"
 
+// Print help message and quit
 def printHelp() {
     println """
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
